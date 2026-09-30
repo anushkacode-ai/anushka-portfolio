@@ -1,0 +1,14 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+:root{--bg:246 247 249;--surface:255 255 255;--ink:20 24 31;--muted:91 100 114;--line:226 229 234;--accent:11 110 127;--onaccent:255 255 255}
+.dark{--bg:15 19 24;--surface:23 28 35;--ink:232 236 241;--muted:154 164 178;--line:38 45 55;--accent:92 200 217;--onaccent:15 19 24}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{@apply bg-bg text-ink font-sans antialiased;overflow-x:hidden}
+:focus-visible{outline:2px solid rgb(var(--accent));outline-offset:3px;border-radius:6px}
+.btn{@apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition duration-200}
+.btn-primary{@apply bg-accent text-onaccent hover:opacity-90}
+.btn-ghost{@apply border border-line bg-surface text-ink hover:border-accent hover:text-accent}
+.badge{@apply inline-block rounded-md border border-line bg-bg px-2.5 py-1 text-xs font-medium text-muted}
+.card{@apply rounded-xl border border-line bg-surface p-6 shadow-sm transition duration-200 hover:shadow-md}
+.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.js .reveal.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}}
